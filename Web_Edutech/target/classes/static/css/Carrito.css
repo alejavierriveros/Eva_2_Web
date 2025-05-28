@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+}
+
+.header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e53935;
+}
+
+#backButton {
+    background-color: #2196F3;
+}
+
+#backButton:hover {
+    background-color: #1976D2;
+}
+
+.cart-container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.cart-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.cart-item h3 {
+    margin: 0;
+}
+
+.cart-item .price {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+.remove-from-cart {
+    background-color: #f44336;
+}
+
+.remove-from-cart:hover {
+    background-color: #e53935;
+}
+
+.cart-actions {
+    text-align: center;
+    margin: 20px;
+}
+
+#clearCartButton {
+    background-color: #f44336;
+}
+
+#clearCartButton:hover {
+    background-color: #e53935;
+}

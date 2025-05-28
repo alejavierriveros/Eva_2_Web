@@ -1,0 +1,12 @@
+com\example\controller\ReporteController.class
+com\example\repository\CursoRepository.class
+com\example\controller\UsuarioControler.class
+com\example\model\Curso.class
+com\example\service\CursoService.class
+com\example\controller\CursoController.class
+com\example\service\ReporteService.class
+com\example\controller\CarritoController.class
+com\example\repository\ReporteRepository.class
+com\example\model\Usuario.class
+com\example\service\UsuarioService.class
+com\example\repository\UsuarioRepository.class

@@ -1,32 +1,24 @@
 package com.example.service;
 
+import com.example.dto.ReporteDTO;
+import com.example.repository.ReporteRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDate;
+import java.util.List;
 
 @Service
 public class ReporteService {
 
-    public Map<String, Object> generarReporteVentas(String fechaInicio, String fechaFin) {
-        Map<String, Object> reporte = new HashMap<>();
-        reporte.put("fechaInicio", fechaInicio);
-        reporte.put("fechaFin", fechaFin);
-        reporte.put("totalVentas", 100);
-        return reporte;
+    private final ReporteRepository reporteRepository;
+
+    public ReporteService(ReporteRepository reporteRepository) {
+        this.reporteRepository = reporteRepository;
     }
 
-    public Map<String, Object> analizarComportamientoUsuario(Long usuarioId) {
-        Map<String, Object> analisis = new HashMap<>();
-        analisis.put("usuarioId", usuarioId);
-        analisis.put("actividad", "Ejemplo de actividad del usuario");
-        return analisis;
+    public List<ReporteDTO> reporteVentasEntreFechas(String desde, String hasta) {
+        LocalDate fechaDesde = LocalDate.parse(desde);
+        LocalDate fechaHasta = LocalDate.parse(hasta);
+        return reporteRepository.findVentasPorRango(fechaDesde, fechaHasta);
     }
-
-    public Map<String, Object> obtenerMetricasTrafico() {
-        Map<String, Object> metrica = new HashMap<>();
-        metrica.put("visitasDiarias", 500); 
-        return metrica;
-    }
-    
 }

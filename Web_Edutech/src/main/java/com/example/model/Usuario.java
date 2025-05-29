@@ -1,7 +1,7 @@
 package com.example.model;
 
 
-import java.util.Optional;
+
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -17,7 +17,5 @@ public class Usuario {
     private String email;
     private String password;
     
-    public static Optional<Usuario> map(Object o){ 
-        throw new UnsupportedOperationException("Unimplemented method 'map'"); 
-    }
+    
 }
